@@ -1,0 +1,5 @@
+sudo arp -s 192.168.72.140 00:0c:29:eb:cb:4b //configure host arp_entry
+sudo ip neigh flush all //flush arp
+test:
+sudo hping3 -S -p 1234 -i u100 --rand-source 192.168.72.140//syn flood
+
